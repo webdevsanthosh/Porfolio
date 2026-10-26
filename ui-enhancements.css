@@ -1,0 +1,375 @@
+:root {
+  --ease-out: cubic-bezier(.2, .75, .25, 1);
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse at 12% 7%, rgba(91, 82, 190, .11), transparent 34rem),
+    radial-gradient(ellipse at 92% 42%, rgba(45, 162, 157, .07), transparent 30rem);
+}
+
+::selection {
+  color: #080b14;
+  background: #75e6d3;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #080b14;
+  background: var(--accent2);
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform .2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.hero {
+  isolation: isolate;
+}
+
+.hero-art {
+  overflow: hidden;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  top: 12%;
+  right: 9%;
+  width: min(34vw, 390px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(139, 124, 255, .13), rgba(77, 226, 207, .05));
+  filter: blur(3px);
+  content: "";
+  animation: hero-glow 9s ease-in-out infinite alternate;
+}
+
+.hero-copy {
+  animation: arrive .75s var(--ease-out) both;
+}
+
+.profile-card {
+  animation: card-float 6s ease-in-out infinite;
+  transition: box-shadow .35s ease, border-color .35s ease;
+}
+
+.profile-card:hover {
+  border-color: #66618e;
+  box-shadow: 0 30px 90px #0009, 0 0 60px #7f70ff25;
+}
+
+.floating-chip {
+  animation: chip-float 4s ease-in-out infinite;
+}
+
+.chip-css {
+  animation-delay: -1.4s;
+}
+
+.chip-js {
+  animation-delay: -2.5s;
+}
+
+.hero h2 #roleText {
+  display: inline-block;
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.hero h2 #roleText.role-changing {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.nav-links a,
+.text-link,
+.demo-link,
+.socials a,
+.back-top {
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.button,
+.skill-card,
+.project-card,
+.stat-card {
+  transition-timing-function: var(--ease-out);
+}
+
+.skill-card:hover,
+.project-card:hover,
+.stat-card:hover {
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .2);
+}
+
+.skill-card:focus-within,
+.project-card:focus-within {
+  border-color: #5b5a87;
+}
+
+.skill-track span {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .9s var(--ease-out);
+}
+
+.skill-card.visible .skill-track span {
+  transform: scaleX(1);
+}
+
+.project-visual > *:not(.visual-label) {
+  transition: transform .4s var(--ease-out);
+}
+
+.project-card:hover .mock-hero,
+.project-card:hover .weather-widget,
+.project-card:hover .todo-window {
+  transform: translateY(-5px) rotate(0);
+}
+
+.timeline-content,
+.contact-panel,
+.stat-card {
+  transition: border-color .25s ease, transform .25s var(--ease-out);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(4px);
+}
+
+.contact-panel:hover {
+  border-color: #555276;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-float {
+  0%, 100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-1deg) translateY(-7px);
+  }
+}
+
+@keyframes chip-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hero-glow {
+  from {
+    opacity: .55;
+    transform: scale(.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-top: 58px;
+    padding-bottom: 82px;
+  }
+
+  .hero-copy {
+    max-width: 620px;
+  }
+
+  .hero-art {
+    min-height: 370px;
+    margin-top: 8px;
+  }
+
+  .hero::before {
+    top: 38%;
+    right: 4%;
+    width: 70vw;
+  }
+
+  .scroll-hint {
+    bottom: 19px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    transition: color .2s ease, background .2s ease;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle[aria-expanded="true"] {
+    color: var(--accent2);
+    background: rgba(77, 226, 207, .08);
+  }
+
+  .nav-links {
+    padding: 12px 20px 22px;
+  }
+
+  .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, .04);
+  }
+
+  .nav-links .nav-contact {
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 44px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2.5px;
+  }
+
+  .hero-description {
+    font-size: .96rem;
+  }
+
+  .hero-art {
+    min-height: 340px;
+  }
+
+  .orbit {
+    width: min(78vw, 310px);
+    height: min(78vw, 310px);
+  }
+
+  .orbit-two {
+    width: min(65vw, 260px);
+    height: min(65vw, 260px);
+  }
+
+  .profile-card {
+    width: min(285px, 82vw);
+  }
+
+  .chip-html {
+    left: 1%;
+    top: 28px;
+  }
+
+  .chip-css {
+    right: 0;
+    top: 68px;
+  }
+
+  .chip-js {
+    right: 2%;
+    bottom: 22px;
+  }
+
+  .socials {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .hero-actions .button {
+    min-height: 48px;
+  }
+
+  .contact-details a {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .hero h1 {
+    font-size: 3.15rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 1.5px;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    min-height: 315px;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .contact-panel h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy,
+  .profile-card,
+  .floating-chip,
+  .hero::before {
+    animation: none;
+  }
+
+  .skill-track span,
+  .hero h2 #roleText {
+    transition: none;
+  }
+}

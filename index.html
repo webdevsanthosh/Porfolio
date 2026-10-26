@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresher portfolio website - web developer">
+  <meta name="theme-color" content="#080b14">
+  <title>Your Name | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ui-enhancements.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#top">yourname<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a>
+        <a class="nav-contact" href="#contact">Contact ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> OPEN TO OPPORTUNITIES</p>
+        <h1>Hello, I'm<br><span class="gradient-text">Your Name.</span></h1>
+        <h2>Aspiring <span id="roleText">Frontend Developer</span><span class="cursor">|</span></h2>
+        <p class="hero-description">I'm a passionate fresher who loves turning ideas into clean, responsive, and user-friendly digital experiences.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore My Work <span>↗</span></a>
+          <a class="button button-outline" href="#contact">Let's Connect</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="mailto:your.email@example.com">Email ↗</a>
+        </div>
+      </div>
+      <div class="hero-art reveal" aria-label="Developer profile illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="profile-card">
+          <div class="profile-top"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span><span class="profile-label">CREATIVE DEVELOPER</span></div>
+          <div class="avatar">YN</div>
+          <p class="profile-name">Your Name</p>
+          <p class="profile-role">Learning · Building · Growing</p>
+          <div class="code-lines"><span><i>const</i> passion = <b>"code"</b>;</span><span><i>const</i> goal = <b>"build great things"</b>;</span><span class="code-success">✓ Ready to learn and contribute</span></div>
+        </div>
+        <div class="floating-chip chip-html">◇ HTML</div><div class="floating-chip chip-css">✳ CSS</div><div class="floating-chip chip-js">JS</div>
+      </div>
+      <a class="scroll-hint" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">01 / ABOUT ME</p><h2>A little about <span class="gradient-text">me.</span></h2></div>
+      <div class="about-grid">
+        <div class="about-text reveal"><p>I'm a recent graduate and aspiring web developer eager to begin my professional journey. I enjoy learning new technologies, solving problems, and creating websites that look great on every device.</p><p>I'm looking for an opportunity where I can contribute to real projects, learn from experienced teammates, and grow as a developer.</p><a href="#contact" class="text-link">Have a project in mind? Let's talk ↗</a></div>
+        <div class="stats-grid reveal"><div class="stat-card"><strong>03<span>+</span></strong><small>Practice Projects</small></div><div class="stat-card"><strong>05<span>+</span></strong><small>Core Technologies</small></div><div class="stat-card"><strong>100<span>%</span></strong><small>Learning Mindset</small></div><div class="stat-card"><strong>∞</strong><small>Curiosity</small></div></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="skills">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">02 / MY TOOLKIT</p><h2>Skills I'm <span class="gradient-text">building.</span></h2><p class="section-subtitle">The tools I use to bring ideas to life.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="skill-icon orange">5</div><h3>HTML5</h3><p>Semantic, accessible page structure.</p><div class="skill-track"><span style="width:85%"></span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon blue">✳</div><h3>CSS3</h3><p>Responsive layouts, animations, and styling.</p><div class="skill-track"><span style="width:78%"></span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon yellow">JS</div><h3>JavaScript</h3><p>Interactive experiences and core logic.</p><div class="skill-track"><span style="width:65%"></span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon cyan">⌘</div><h3>Git & GitHub</h3><p>Version control and project collaboration.</p><div class="skill-track"><span style="width:60%"></span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon purple">R</div><h3>Responsive Design</h3><p>Layouts for mobile, tablet, and desktop.</p><div class="skill-track"><span style="width:75%"></span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon green">✦</div><h3>Problem Solving</h3><p>Breaking challenges into clear steps.</p><div class="skill-track"><span style="width:70%"></span></div></article>
+        </div>
+        <p class="note">Tip: Update skill names and progress bars to match your real skills.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading reveal"><p class="eyebrow">03 / SELECTED WORK</p><h2>Projects that show <span class="gradient-text">my growth.</span></h2><p class="section-subtitle">A few examples of what I've been learning and building.</p></div>
+      <div class="projects-grid">
+        <article class="project-card reveal"><div class="project-visual visual-one"><div class="browser-bar"><span></span><span></span><span></span></div><div class="mock-hero"><div class="mock-title"></div><div class="mock-line"></div><div class="mock-button"></div></div><div class="mock-cards"><i></i><i></i><i></i></div><span class="visual-label">01 / WEB DESIGN</span></div><div class="project-info"><div class="project-meta"><span>01</span><span>HTML · CSS · JS</span></div><h3>Personal Portfolio</h3><p>A responsive portfolio to showcase my skills, projects, and contact details.</p><div class="project-links"><a href="#" class="demo-link">Live Demo ↗</a><a href="#" class="demo-link">Source Code ↗</a></div></div></article>
+        <article class="project-card reveal"><div class="project-visual visual-two"><div class="weather-widget"><span class="sun">☀</span><small>YOUR CITY</small><strong>28°</strong><span>Sunny day</span><div class="weather-bottom"><i></i><i></i><i></i></div></div><span class="visual-label">02 / JAVASCRIPT</span></div><div class="project-info"><div class="project-meta"><span>02</span><span>HTML · CSS · JS · API</span></div><h3>Weather Dashboard</h3><p>A simple weather interface to practise API integration and dynamic UI.</p><div class="project-links"><a href="#" class="demo-link">Live Demo ↗</a><a href="#" class="demo-link">Source Code ↗</a></div></div></article>
+        <article class="project-card reveal"><div class="project-visual visual-three"><div class="todo-window"><div class="todo-heading">My Tasks <span>＋</span></div><div class="todo-item"><b>✓</b> Learn HTML basics</div><div class="todo-item"><b>✓</b> Build responsive layout</div><div class="todo-item"><b></b> Practise JavaScript</div><div class="todo-item"><b></b> Publish my project</div></div><span class="visual-label">03 / PRODUCTIVITY</span></div><div class="project-info"><div class="project-meta"><span>03</span><span>HTML · CSS · JS</span></div><h3>Task Tracker</h3><p>A lightweight task list concept to practise events, state, and DOM updates.</p><div class="project-links"><a href="#" class="demo-link">Live Demo ↗</a><a href="#" class="demo-link">Source Code ↗</a></div></div></article>
+      </div>
+      <p class="note">These are sample project cards. Replace them with your own projects and real links before publishing.</p>
+    </section>
+
+    <section class="section section-muted" id="education">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">04 / MY JOURNEY</p><h2>Education & <span class="gradient-text">learning.</span></h2></div>
+        <div class="timeline">
+          <div class="timeline-item reveal"><span class="timeline-dot"></span><div class="timeline-date">2022 — 2025</div><div class="timeline-content"><h3>Your Degree / Course</h3><p class="timeline-place">Your College or University</p><p>Relevant subjects: Web Development, Programming, Database Management, and Software Engineering.</p></div></div>
+          <div class="timeline-item reveal"><span class="timeline-dot"></span><div class="timeline-date">2025 — PRESENT</div><div class="timeline-content"><h3>Self-learning & Projects</h3><p class="timeline-place">Online courses · Personal practice</p><p>Strengthening frontend fundamentals by building small projects and exploring modern web practices.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <div class="contact-panel reveal"><div><p class="eyebrow">05 / GET IN TOUCH</p><h2>Let's build something<br><span class="gradient-text">meaningful.</span></h2><p class="contact-copy">I'm looking for entry-level opportunities and collaborations. My inbox is always open!</p><a class="button button-primary" href="mailto:your.email@example.com?subject=Portfolio%20Enquiry">Send Me an Email ↗</a></div><div class="contact-details"><div><span>EMAIL</span><a href="mailto:your.email@example.com">your.email@example.com</a></div><div><span>LOCATION</span><p>Your City, India</p></div><div><span>STATUS</span><p><span class="status-dot"></span> Available for opportunities</p></div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><a class="logo" href="#top">yourname<span>.</span></a><p>Designed & built with <span>♥</span> and curiosity.</p><a href="#top" class="back-top">Back to top ↑</a><small>© <span id="year"></span> Your Name. All rights reserved.</small></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
